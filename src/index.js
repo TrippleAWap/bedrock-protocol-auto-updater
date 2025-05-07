@@ -29,10 +29,7 @@ const PACKET_OVERLOADS = {
     const { RealmAPI } = require("prismarine-realms");
     const { Authflow, Titles } = require("prismarine-auth");
     require("./utils")
-    const auth = new Authflow("main", "../tokens", {
-        flow: "sisu",
-        authTitle: Titles.MinecraftAndroid,
-    }, (c) => {
+    const auth = new Authflow("main", "tokens", { flow: 'live', authTitle: Titles.MinecraftNintendoSwitch }, (c) => {
         console.log(c.message);
     });
     console.time("auth");
